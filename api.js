@@ -1,5 +1,4 @@
-function addResource(title, description, image, url, buttonText = "Open") {
-
+function addResource(title, description, image, url) {
     const container = document.getElementById("resources");
 
     if (!container) {
@@ -7,8 +6,9 @@ function addResource(title, description, image, url, buttonText = "Open") {
         return;
     }
 
-    const resource = document.createElement("div");
+    const resource = document.createElement("a");
     resource.className = "resource";
+    resource.href = url;
 
     const img = document.createElement("img");
     img.className = "resource-image";
@@ -26,16 +26,8 @@ function addResource(title, description, image, url, buttonText = "Open") {
     text.className = "resource-description";
     text.textContent = description;
 
-    const button = document.createElement("a");
-    button.className = "resource-button";
-    button.href = url;
-    button.textContent = buttonText;
-    button.target = "_blank";
-    button.rel = "noopener noreferrer";
-
     content.appendChild(heading);
     content.appendChild(text);
-    content.appendChild(button);
 
     resource.appendChild(img);
     resource.appendChild(content);
