@@ -21,7 +21,7 @@
         .page {
             width: 100%;
             max-width: 1000px;
-            margin: 0 auto;
+            margin: 0;
             padding: 45px 25px 60px;
         }
 
@@ -50,27 +50,22 @@
         .resource {
             display: block;
             width: 50%;
-
             background: rgb(25, 25, 25);
             border: 1px solid rgb(45, 45, 45);
             border-radius: 10px;
-
             overflow: hidden;
-
             color: white;
             text-decoration: none;
             text-align: left;
 
             transition:
                 background 0.15s ease,
-                border-color 0.15s ease,
-                transform 0.15s ease;
+                border-color 0.15s ease;
         }
 
         .resource:hover {
             background: rgb(30, 30, 30);
             border-color: rgb(65, 65, 65);
-            transform: translateY(-2px);
         }
 
         .resource-image {
