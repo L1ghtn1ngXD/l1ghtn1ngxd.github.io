@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>V0ltage's resources</title>
 
     <style>
@@ -45,11 +46,28 @@
         }
 
         .resource {
+            display: block;
             width: 100%;
+
             background: rgb(25, 25, 25);
             border: 1px solid rgb(45, 45, 45);
             border-radius: 12px;
+
             overflow: hidden;
+
+            color: white;
+            text-decoration: none;
+
+            transition:
+                background 0.15s ease,
+                border-color 0.15s ease,
+                transform 0.15s ease;
+        }
+
+        .resource:hover {
+            background: rgb(30, 30, 30);
+            border-color: rgb(65, 65, 65);
+            transform: translateY(-2px);
         }
 
         .resource-image {
@@ -65,38 +83,17 @@
 
         .resource-title {
             margin: 0 0 10px;
+
             font-size: 22px;
             font-weight: 600;
         }
 
         .resource-description {
             margin: 0;
+
             color: rgb(170, 170, 170);
             line-height: 1.6;
             font-size: 15px;
-        }
-
-        .resource-button {
-            display: inline-block;
-            margin-top: 18px;
-            padding: 10px 18px;
-
-            background: rgb(40, 40, 40);
-            color: white;
-
-            border: 1px solid rgb(55, 55, 55);
-            border-radius: 8px;
-
-            text-decoration: none;
-            font-size: 14px;
-
-            transition: background 0.15s ease,
-                        border-color 0.15s ease;
-        }
-
-        .resource-button:hover {
-            background: rgb(50, 50, 50);
-            border-color: rgb(70, 70, 70);
         }
 
         footer {
@@ -106,6 +103,7 @@
         }
 
         @media (max-width: 600px) {
+
             .page {
                 padding: 30px 16px 45px;
             }
@@ -144,12 +142,14 @@
 
     <script src="api.js"></script>
 
-    addResource(
-        "Tech Resource Archive",
-        "A collection of useful software, games, utilities and other technical resources.",
-        "assets/tra.png",
-        "https://l1ghtn1ngxd.github.io/tech-resource-archive",
-    );
-    
+    <script>
+        addResource(
+            "Tech Resource Archive",
+            "A collection of useful software, games, utilities and other technical resources.",
+            "assets/tra.png",
+            "https://l1ghtn1ngxd.github.io/tech-resource-archive"
+        );
+    </script>
+
 </body>
 </html>
