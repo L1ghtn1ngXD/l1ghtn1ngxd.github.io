@@ -37,26 +37,29 @@
             line-height: 1.6;
             font-size: 15px;
             margin-bottom: 40px;
+            text-align: left;
         }
 
         .resources {
             display: flex;
             flex-direction: column;
-            gap: 28px;
+            align-items: flex-start;
+            gap: 20px;
         }
 
         .resource {
             display: block;
-            width: 100%;
+            width: 50%;
 
             background: rgb(25, 25, 25);
             border: 1px solid rgb(45, 45, 45);
-            border-radius: 12px;
+            border-radius: 10px;
 
             overflow: hidden;
 
             color: white;
             text-decoration: none;
+            text-align: left;
 
             transition:
                 background 0.15s ease,
@@ -78,38 +81,41 @@
         }
 
         .resource-content {
-            padding: 22px;
+            padding: 16px;
+            text-align: left;
         }
 
         .resource-title {
-            margin: 0 0 10px;
-
-            font-size: 22px;
+            margin: 0 0 7px;
+            font-size: 19px;
             font-weight: 600;
         }
 
         .resource-description {
             margin: 0;
-
             color: rgb(170, 170, 170);
-            line-height: 1.6;
-            font-size: 15px;
+            line-height: 1.5;
+            font-size: 14px;
         }
 
         footer {
             margin-top: 50px;
             color: rgb(100, 100, 100);
             font-size: 13px;
+            text-align: left;
         }
 
-        @media (max-width: 600px) {
-
+        @media (max-width: 700px) {
             .page {
                 padding: 30px 16px 45px;
             }
 
             .site-title {
                 font-size: 25px;
+            }
+
+            .resource {
+                width: 100%;
             }
 
             .resource-content {
