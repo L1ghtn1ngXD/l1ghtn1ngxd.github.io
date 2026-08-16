@@ -2,7 +2,6 @@ function addResource(title, description, image, url) {
     const container = document.getElementById("resources");
 
     if (!container) {
-        console.error("Resource container not found.");
         return;
     }
 
